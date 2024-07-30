@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:  "Rubik", sans-serif;
+   background-color: var(--Very-dark-blue);   
+}
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+ /* <uniquifier>: Use a unique and descriptive class name */
+ /* <weight>: Use a value from 300 to 900 */
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
+
+/* Colors */
+
+:root{
+
+    /* Primary */
+
+    --blue: hsl(246, 80%, 60%);
+
+    --light-orange: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+
+.container-principal{
+    margin: auto;
+    width: 327px;
+    position: relative;
+}
+
+.usuario{
+    margin-top: 83px;
+    position: relative;
+}
+
+.usuario-card{
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 327px;
+    height: 134px;
+    border-radius: 15px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.usuario-avatar img{
+    width: 68px;
+    border-radius: 50px;
+    border: solid 3px var(--white);
+}
+
+.usuario-nombre p{
+    font-family: "Rubik", sans-serif;
+    font-weight: lighter;
+}
+
+.usuario-nombre h2{
+    font-family: "Rubik", sans-serif;
+    font-weight: lighter;
+}
+
+.usuario-datos{
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    font-size: 1.2em;
+    padding-top: 110px;
+   
+}
+
+.usuario-datos__frecuencia{
+    color: var(--pale-blue);
+}
+
+.usuario-datos__frecuencia:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+.datos{
+    margin-top: 50px;
+  
+}
+
+.datos__card{
+    color: var(--pale-blue);
+    position: relative; 
+    margin-bottom: 115px;
+    
+}
+
+.datos__card--fondo{
+    background-color: var(--light-orange);
+    height: 80px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+}
+
+.datos__card--fondo img{
+   margin-top: -10px; 
+   padding-left: 235px;
+}
+
+.datos__datalles{
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75px;
+    padding: 25px;
+    border-radius: 16px;
+    position: absolute;
+    width: 276px;
+    bottom: -85px;
+}
+
+.datos__datalles:hover{
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
+    
+}
+
+.datos__actividad{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datos__actividad p{
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--white);
+}
+
+.datos__horas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datos__horas--hora{
+    font-size: 2em;
+    color: var(--white);
+    font-weight: 100;
+}
+
+@media(min-width: 1200px){
+    .container-principal{
+      width: 1115px;
+      height: 519px;
+      display: flex;
+       
+    }
+}
+
+@media(min-width: 1200px){
+    .container-principal{
+     margin-top: 167px;
+    }
+    .datos{
+        width: 860px;
+        height: 550px;
+        margin-top: 0px;
+        padding-top: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .datos__card{
+        width: 255px;
+        
+    }
+
+    .datos__card--fondo img{
+        margin-top: -10px;
+        padding-left: 156px;
+    }
+    
+    .usuario-avatar img{
+        width: 90px;
+        
+    }
+    .usuario-card{
+    height: 357px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    }
+    .usuario{
+        margin-top: 0px;
+        margin-right: 20px;
+        width: 255px;
+    }
+    .usuario-datos{
+        padding-top: 389px;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    .usuario-datos__frecuencia{
+        margin-bottom: 20px;
+    
+    }
+    .usuario-avatar{
+        margin-left: 35px; 
+    }
+    .usuario-nombre{
+        margin-left: 35px;
+    }
+    .usuario-nombre h2{
+        
+        font-size: 2.5em;
+    }
+    .datos__datalles{
+        padding: 63px 0px 63px 0px;
+        width: 255px;
+    }
+    .datos__actividad{
+        margin: 20px;
+    }
+    .datos__horas{
+        margin: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .datos__horas--hora{
+        font-size: 3.5em;
+    }
+}
